@@ -27,6 +27,10 @@ app.get("/", (req, res) => {
 const usersRouter = require("./routes/users");
 app.use("/api/users", usersRouter);
 
+// KPI route
+const salesRouter = require("./routes/sales");
+app.use("/api/sales", salesRouter);
+
 // Start Server
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
